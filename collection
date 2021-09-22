@@ -29,7 +29,68 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Create Book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    createBook(\r\n        title : \"Master MongoDB\",\r\n        author : \"test\",\r\n        description : \"Desc\",\r\n        release_year : 2021,\r\n        genre : \"OOP\"\r\n    ) {\r\n        title,\r\n        author\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"43-H+F1RKePpB0Uxssg9bH4BGQjZTA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Sep 2021 11:52:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"createBook\": {\n            \"title\": \"Master MongoDB\",\n            \"author\": \"test\"\n        }\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Get All Books",
@@ -55,7 +116,68 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get All Books",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Query{\r\n    getAllBooks {\r\n        _id\r\n        title\r\n        author\r\n        description\r\n        release_year\r\n        genre\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"121-a7NMFe5SPsbsPZLDscRxapRYeTk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Sep 2021 11:52:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"getAllBooks\": [\n            {\n                \"_id\": \"614b180843a6dbb07d219668\",\n                \"title\": \"Master MongoDB\",\n                \"author\": \"test\",\n                \"description\": \"Desc\",\n                \"release_year\": 2021,\n                \"genre\": \"OOP\"\n            },\n            {\n                \"_id\": \"614b18fd20bee1fbad02b2e9\",\n                \"title\": \"Master MongoDB\",\n                \"author\": \"test\",\n                \"description\": \"Desc\",\n                \"release_year\": 2021,\n                \"genre\": \"OOP\"\n            }\n        ]\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Update Book",
@@ -65,7 +187,7 @@
 				"body": {
 					"mode": "graphql",
 					"graphql": {
-						"query": "mutation {\r\n    updateBook(\r\n        _id : \"6149e2fae0d95a9b2c555669\",\r\n        title : \"Learn Basic MongoDB\"\r\n    ){\r\n        _id,\r\n        title,\r\n        author\r\n    }\r\n}",
+						"query": "mutation {\r\n    updateBook(\r\n        _id : \"614b180843a6dbb07d219668\",\r\n        title : \"Learn Basic MongoDB\"\r\n    ){\r\n        _id,\r\n        title,\r\n        author\r\n    }\r\n}",
 						"variables": ""
 					}
 				},
@@ -81,7 +203,242 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Update Book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    updateBook(\r\n        _id : \"614b180843a6dbb07d219668\",\r\n        title : \"Learn Basic MongoDB\"\r\n    ){\r\n        _id,\r\n        title,\r\n        author\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-fA3w/fanBkV3H4nOYXhMiEMpsqo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Sep 2021 11:52:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"updateBook\": {\n            \"_id\": \"614b180843a6dbb07d219668\",\n            \"title\": \"Learn Basic MongoDB\",\n            \"author\": \"test\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n    deleteBook(\r\n        _id : \"614b180843a6dbb07d219668\"\r\n    )\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    deleteBook(\r\n        _id : \"614b180843a6dbb07d219668\"\r\n    )\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-h2AN089WsTO8bAqCrZUgqb2nddE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Sep 2021 11:53:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"deleteBook\": true\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getBook(\r\n        _id : \"614b18fd20bee1fbad02b2e9\"\r\n    ){\r\n        _id\r\n        title\r\n        author\r\n        description\r\n        release_year\r\n        genre\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    getBook(\r\n        _id : \"614b18fd20bee1fbad02b2e9\"\r\n    ){\r\n        _id\r\n        title\r\n        author\r\n        description\r\n        release_year\r\n        genre\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"98-KqIn+PSNXhHbSjYPqDyBhlFv0Fk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Sep 2021 11:53:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"getBook\": {\n            \"_id\": \"614b18fd20bee1fbad02b2e9\",\n            \"title\": \"Master MongoDB\",\n            \"author\": \"test\",\n            \"description\": \"Desc\",\n            \"release_year\": 2021,\n            \"genre\": \"OOP\"\n        }\n    }\n}"
+				}
+			]
 		}
 	]
 }
