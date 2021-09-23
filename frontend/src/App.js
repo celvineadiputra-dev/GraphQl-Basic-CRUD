@@ -5,7 +5,7 @@ import List from "./components/List"
 
 function App() {
   return (
-    <div>
+    <div className="m-2">
       <Router>
         <Switch>
           <Route path="/book/:id/edit" component={Form} />

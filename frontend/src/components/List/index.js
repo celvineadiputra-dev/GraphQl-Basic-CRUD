@@ -1,16 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Button from "../Atom/Button/index"
 
 function List(props) {
     return (
-        <div className="flex">
-            <diV>
-                <h1 className="text-5xl">LIST BOOK</h1>
-            </diV>
-            <diV>
-                <Link to="/book/new" className="bg-blue-500 text-white p-5 text-justify align-center rounded">Add new Book</Link>
-            </diV>
-        </div>
+        <>
+            <div className="grid grid-cols-6 gap-4 mb-10">
+                <diV className="col-span-4">
+                    <h1 className="text-5xl">List Book</h1>
+                </diV>
+                <diV className="flex items-center">
+                    <Button text={'Add new book'} url="/book/new" />
+                </diV>
+            </div>
+            <div className="grid grid-cols-12 gap-4">
+                <div className="col-span-12">
+                    <table className="table-auto">
+                        <thead>
+                            <th className="border w-auto p-2">No</th>
+                            <th className="border w-auto p-2">Title</th>
+                            <th className="border w-auto p-2">Author</th>
+                            <th className="border w-auto p-2">Release Year</th>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </>
     )
 }
 
